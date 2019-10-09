@@ -147,6 +147,7 @@
 \newcommand\@hmwkAuthorEmail{\@latex@error{No \noexpand\hmwkAuthorEmail given}\@ehc}
 
 \renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
+\newcommand{\smallpart}[1]{\textbf{Part \Alph{partCounter}}\stepcounter{partCounter}\\}
 
 %
 % Various Helper Commands
@@ -173,4 +174,11 @@
 \newcommand{\Cov}{\mathrm{Cov}}
 \newcommand{\Bias}{\mathrm{Bias}}
 
-
+% no left margin list
+\newenvironment{noindentlist}{
+  %\renewcommand*{\theenumi}{\alph{enumi}}%
+  %\renewcommand*{\labelenumi}{\alph{enumi}.}%
+  \enumerate[leftmargin=*]
+}{%
+  \endenumerate
+}
