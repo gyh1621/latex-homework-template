@@ -1,7 +1,7 @@
 latex-homework-template
 =======================
 
-*Check homework.pdf for current output format*
+**Check homework.pdf for current output format**
 
 The LaTeX file that I use as the base for all my homeworks in university.
 
