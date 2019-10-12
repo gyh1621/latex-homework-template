@@ -11,6 +11,8 @@
 \usepackage[font=itshape]{quoting}
 \usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage{xparse}
+\usepackage{indentfirst}
 \renewcommand\labelitemi{--}
 
 \usetikzlibrary{automata,positioning}
@@ -155,6 +157,9 @@
 
 % Useful for algorithms
 \newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}
+\algrenewcommand{\algorithmiccomment}[1]{\hskip3em$\rightarrow$ #1}
+\NewDocumentCommand{\LeftComment}{s m}{%
+  \Statex \IfBooleanF{#1}{\hspace*{\ALG@thistlm}}\(\rightarrow\) #2}
 
 % For derivatives
 \newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)}
@@ -181,4 +186,11 @@
   \enumerate[leftmargin=*]
 }{%
   \endenumerate
+}
+
+% indent paragraphs %
+\newenvironment{indentparagraphs}{
+    \setlength\parindent{10pt}
+}{%
+    \setlength\parindent{0pt}
 }
