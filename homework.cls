@@ -77,6 +77,7 @@
 
 
 \setlength\parindent{0pt}
+\setlength\parskip{0.3em}
 
 %
 % Create Problem Sections
