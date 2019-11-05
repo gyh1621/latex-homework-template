@@ -6,6 +6,9 @@
 \usepackage{amsthm}
 \usepackage{amsfonts}
 \usepackage{tikz}
+\usepackage[position=b]{subcaption}
+\usepackage{tkz-berge}
+\usetikzlibrary{trees}
 \usepackage[plain]{algorithm}
 \usepackage{algpseudocode}
 \usepackage[font=itshape]{quoting}
@@ -124,6 +127,28 @@
         \setcounter{homeworkProblemCounter}{#1}
     \fi
     \section{\color{red} Problem \arabic{homeworkProblemCounter}}
+    \setcounter{partCounter}{1}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+\newenvironment{extraHomeworkProblem}[1][-1]{
+    \ifnum#1>0
+        \setcounter{homeworkProblemCounter}{#1}
+    \fi
+    \section{Extra Problem \arabic{homeworkProblemCounter}}
+    \setcounter{partCounter}{1}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+\newenvironment{wrongExtraProblem}[1][-1]{
+    \ifnum#1>0
+        \setcounter{homeworkProblemCounter}{#1}
+    \fi
+    \section{\color{red} Extra Problem \arabic{homeworkProblemCounter}}
     \setcounter{partCounter}{1}
     \enterProblemHeader{homeworkProblemCounter}
 }{
