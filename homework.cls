@@ -10,7 +10,7 @@
 \usepackage{tkz-berge}
 \usetikzlibrary{trees}
 \usepackage[plain]{algorithm}
-\usepackage{algpseudocode}
+\usepackage[noend]{algpseudocode}
 \usepackage[font=itshape]{quoting}
 \usepackage{enumitem}
 \usepackage{xcolor}
